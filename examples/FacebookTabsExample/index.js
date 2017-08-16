@@ -13,7 +13,7 @@ import OverlayExample from './OverlayExample';
 import FacebookExample from './FacebookExample';
 import DynamicExample from './DynamicExample';
 
-const HomeScreen = {
+const HomeScreen = React.createClass({
   navigationOptions: {
     title: 'Welcome',
   },
@@ -58,7 +58,7 @@ const HomeScreen = {
       </TouchableOpacity>
     </View>;
   },
-};
+});
 
 const App = StackNavigator({
   Home: { screen: HomeScreen },

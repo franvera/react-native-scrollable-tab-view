@@ -1,5 +1,4 @@
 const React = require('react');
-const PropTypes = require('prop-types')
 const { ViewPropTypes } = ReactNative = require('react-native');
 const {
   View,
@@ -15,22 +14,22 @@ const Button = require('./Button');
 
 const WINDOW_WIDTH = Dimensions.get('window').width;
 
-const ScrollableTabBar = {
+const ScrollableTabBar = React.createClass({
   propTypes: {
-    goToPage: PropTypes.func,
-    activeTab: PropTypes.number,
-    tabs: PropTypes.array,
-    backgroundColor: PropTypes.string,
-    activeTextColor: PropTypes.string,
-    inactiveTextColor: PropTypes.string,
-    scrollOffset: PropTypes.number,
+    goToPage: React.PropTypes.func,
+    activeTab: React.PropTypes.number,
+    tabs: React.PropTypes.array,
+    backgroundColor: React.PropTypes.string,
+    activeTextColor: React.PropTypes.string,
+    inactiveTextColor: React.PropTypes.string,
+    scrollOffset: React.PropTypes.number,
     style: ViewPropTypes.style,
     tabStyle: ViewPropTypes.style,
     tabsContainerStyle: ViewPropTypes.style,
     textStyle: Text.propTypes.style,
-    renderTab: PropTypes.func,
+    renderTab: React.PropTypes.func,
     underlineStyle: ViewPropTypes.style,
-    onScroll:PropTypes.func,
+    onScroll:React.PropTypes.func,
   },
 
   getDefaultProps() {
@@ -217,7 +216,7 @@ const ScrollableTabBar = {
     this._containerMeasurements = e.nativeEvent.layout;
     this.updateView({value: this.props.scrollValue._value, });
   },
-};
+});
 
 module.exports = ScrollableTabBar;
 
