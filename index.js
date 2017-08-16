@@ -20,7 +20,7 @@ const DefaultTabBar = require('./DefaultTabBar');
 const ScrollableTabBar = require('./ScrollableTabBar');
 
 
-const ScrollableTabView = React.createClass({
+const ScrollableTabView = {
   mixins: [TimerMixin, ],
   statics: {
     DefaultTabBar,
@@ -274,7 +274,7 @@ const ScrollableTabView = React.createClass({
       {(this.props.tabBarPosition === 'bottom' || overlayTabs) && this.renderTabBar(tabBarProps)}
     </View>;
   },
-});
+};
 
 module.exports = ScrollableTabView;
 

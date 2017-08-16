@@ -5,7 +5,7 @@ import {
 
 import ScrollableTabView, {DefaultTabBar, } from 'react-native-scrollable-tab-view';
 
-export default React.createClass({
+export default {
   render() {
     return <ScrollableTabView
       style={{marginTop: 20, }}
@@ -16,4 +16,4 @@ export default React.createClass({
       <Text tabLabel='Tab #3'>project</Text>
     </ScrollableTabView>;
   },
-});
+};
